@@ -21,6 +21,8 @@ namespace Person
 
             IJsonConvertible jsonConvertible = new Person("Gastón", "Pereiro");
             Console.WriteLine(jsonConvertible.ConvertToJson());
+
+            
         }
     }
 }

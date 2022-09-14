@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Person
 {
@@ -18,6 +19,9 @@ namespace Person
             Console.WriteLine($"El 'Faraón' {faraon.Name} {tota.FamilyName}");
             json = JsonSerializer.Serialize(faraon);
             Console.WriteLine(json);
+
+            IJsonConvertible Person = new Person("Ignacio","Berra");
+            Console.WriteLine(Person.ConvertToJson());
         }
     }
 }
